@@ -83,8 +83,13 @@ public class DragUIItem :
   {
     Vector3 pos = UIDragElement.localPosition;
 
-    Vector3 minPosition = Canvas.rect.min - UIDragElement.rect.min;
-    Vector3 maxPosition = Canvas.rect.max - UIDragElement.rect.max;
+    Vector3 minPosition = 
+      Canvas.rect.min - 
+      UIDragElement.rect.min;
+
+    Vector3 maxPosition = 
+      Canvas.rect.max - 
+      UIDragElement.rect.max;
 
     pos.x = Mathf.Clamp(
       UIDragElement.localPosition.x, 
