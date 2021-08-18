@@ -118,11 +118,9 @@ public class DragUIItem :
 
     if (Physics.Raycast(ray, out hit, 1000.0f))
     {
-      Debug.Log("Hit ground");
-
       Vector3 worldPoint = hit.point;
 
-      Debug.Log(worldPoint);
+      //Debug.Log(worldPoint);
       CreateObject(worldPoint);
     }
   }
