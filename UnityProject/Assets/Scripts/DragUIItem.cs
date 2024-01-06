@@ -133,9 +133,19 @@ public class DragUIItem :
       return;
     }
 
-    GameObject obj = Instantiate(
-      PrefabToInstantiate, 
-      position, 
-      Quaternion.identity);
+
+    if (PositionWithinCell(position))
+    {
+
+      GameObject obj = Instantiate(
+        PrefabToInstantiate,
+        position,
+        Quaternion.identity);
+    }
+  }
+
+  bool PositionWithinCell(Vector3 pos)
+  {
+    return true;
   }
 }
